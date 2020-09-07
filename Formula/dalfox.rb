@@ -2,16 +2,16 @@
 class Dalfox < Formula
   desc "DalFox(Finder Of XSS) / Parameter Analysis and XSS Scanning tool based on golang"
   homepage "https://www.hahwul.com"
-  version "2.0.2"
+  version "2.1.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/hahwul/dalfox/releases/download/v2.0.2/dalfox_2.0.2_darwin_amd64.tar.gz"
-    sha256 "13d70bd3b9e7e66b944463b5732226318272e9af5542ea647af6305398a231e3"
+    url "https://github.com/hahwul/dalfox/releases/download/v2.1.0/dalfox_2.1.0_darwin_amd64.tar.gz"
+    sha256 "1b94df2883282cb05328246eff5b06cb3ca1df23a8c44d264a98c1b086e01a83"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/hahwul/dalfox/releases/download/v2.0.2/dalfox_2.0.2_linux_amd64.tar.gz"
-      sha256 "89649104fda6275aaeed341f48c8809c40e77bb589989caa19e4d058b4532519"
+      url "https://github.com/hahwul/dalfox/releases/download/v2.1.0/dalfox_2.1.0_linux_amd64.tar.gz"
+      sha256 "fc5b1bf62d66c19239afc25f0c345c6715d8358f1d322745b18d263e4ebe6359"
     end
   end
 
