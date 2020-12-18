@@ -2,26 +2,24 @@
 class Dalfox < Formula
   desc "DalFox(Finder Of XSS) / Parameter Analysis and XSS Scanning tool based on golang"
   homepage "https://www.hahwul.com"
-  version "2.2.5"
+  version "2.2.6"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/hahwul/dalfox/releases/download/v2.2.5/dalfox_2.2.5_darwin_amd64.tar.gz"
-    sha256 "3186c17d27f28649a99d9ef577948621287ab2ad38257aa3acd4b2b1b409296c"
-  elsif OS.linux?
-    if Hardware::CPU.intel?
-      url "https://github.com/hahwul/dalfox/releases/download/v2.2.5/dalfox_2.2.5_linux_amd64.tar.gz"
-      sha256 "7087dd7f9bf48ecc9473a2f715e9615b13229176f71060ad99aefc276a79c2bb"
-    end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/hahwul/dalfox/releases/download/v2.2.5/dalfox_2.2.5_linux_arm64.tar.gz"
-        sha256 "cad65b3cf245b10f89c399f3c13add151f93232cb7d2cd21c944e4aa49572d6e"
-      else
-        url "https://github.com/hahwul/dalfox/releases/download/v2.2.5/dalfox_2.2.5_linux_armv6.tar.gz"
-        sha256 "1963d09a1d8c2377ad25dba23d450a1d4dcd185d05b1666b905cbba667c409ca"
-      end
-    end
+    url "https://github.com/hahwul/dalfox/releases/download/v2.2.6/dalfox_2.2.6_darwin_amd64.tar.gz"
+    sha256 "758832ee6da077b96398a2cbe2d0d3d5debc3cbc926454362704ba30983adf45"
+  end
+  if OS.linux? && Hardware::CPU.intel?
+    url "https://github.com/hahwul/dalfox/releases/download/v2.2.6/dalfox_2.2.6_linux_amd64.tar.gz"
+    sha256 "5a1b2f556181b09aad4373d649aeb53b96aed609dd9575fd7010126d938d01d6"
+  end
+  if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+    url "https://github.com/hahwul/dalfox/releases/download/v2.2.6/dalfox_2.2.6_linux_armv6.tar.gz"
+    sha256 "7989893aea0e52ded8d7ed2056a743fc059d151c8dbc1c33d85017e51bc4692a"
+  end
+  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+    url "https://github.com/hahwul/dalfox/releases/download/v2.2.6/dalfox_2.2.6_linux_arm64.tar.gz"
+    sha256 "1f075d5d7a58b5fb9f23fe4a148099cfefcf22f5dc41d0792042580b00c5b7d6"
   end
 
   def install
