@@ -10,19 +10,19 @@ class Dalfox < Formula
 
   if OS.mac?
     url "https://github.com/hahwul/dalfox/releases/download/v2.2.7/dalfox_2.2.7_darwin_amd64.tar.gz"
-    sha256 "82474c5e7b51194dca7919de59b09a134f8e042c9b3061e9ac9e6a374a142cbb"
+    sha256 "cfa16cd4c599ca4529c179deb497d004c8f37bfdb5a751b0e5d88d1397f76130"
   end
   if OS.linux? && Hardware::CPU.intel?
     url "https://github.com/hahwul/dalfox/releases/download/v2.2.7/dalfox_2.2.7_linux_amd64.tar.gz"
-    sha256 "643bdf22cfe96d2087de59f9f02c06257712a1b5061490d963e0054ec5fbc8d6"
+    sha256 "55e6c7b2b775efff6bc8c1a63f0834e934cd4e4d90efc519cada84224956e6d8"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
     url "https://github.com/hahwul/dalfox/releases/download/v2.2.7/dalfox_2.2.7_linux_armv6.tar.gz"
-    sha256 "13e60ca87bea7160ce2d75e22f0dffc25605e8de175d78b3f2e8861d044483ca"
+    sha256 "cb8429cea09d5dabee44ed8ecafb554f0a9e8a037e8d3e854946a9dcee30debf"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
     url "https://github.com/hahwul/dalfox/releases/download/v2.2.7/dalfox_2.2.7_linux_arm64.tar.gz"
-    sha256 "fc1b08d417a86a68c996480a26c3455143f800b85e6c21c5481aa842915941a3"
+    sha256 "1bb24b7c54ed59681615960b6b9150fcf76e23bec4063d773e90be1184917c2b"
   end
 
   def install
