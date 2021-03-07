@@ -5,24 +5,24 @@
 class Dalfox < Formula
   desc "DalFox(Finder Of XSS) / Parameter Analysis and XSS Scanning tool based on golang"
   homepage "https://www.hahwul.com"
-  version "2.3.3"
+  version "2.3.4"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/hahwul/dalfox/releases/download/v2.3.3/dalfox_2.3.3_darwin_amd64.tar.gz"
-    sha256 "4dcd270263545f62c1e12adefbf8b79abdef0c07a42bc9a3d126679382c55a9a"
+    url "https://github.com/hahwul/dalfox/releases/download/v2.3.4/dalfox_2.3.4_darwin_amd64.tar.gz"
+    sha256 "946f4353843842a171373bd7c2dc9a315a8e719737f6058d812487622dcb219e"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/hahwul/dalfox/releases/download/v2.3.3/dalfox_2.3.3_linux_amd64.tar.gz"
-    sha256 "dcee57c5375f93a88c08b50bb8b6305ae97b23863966701b66f2ded4452c7e88"
+    url "https://github.com/hahwul/dalfox/releases/download/v2.3.4/dalfox_2.3.4_linux_amd64.tar.gz"
+    sha256 "63408c4293f553d3ebf3ad287e9909bfeab94e0d8a2a53959843c74fb0bd0788"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/hahwul/dalfox/releases/download/v2.3.3/dalfox_2.3.3_linux_armv6.tar.gz"
-    sha256 "c63eaa992132e867d8b3e1b8fbbb92320c50d74498cfa5e1a4a15d6409feb9f4"
+    url "https://github.com/hahwul/dalfox/releases/download/v2.3.4/dalfox_2.3.4_linux_armv6.tar.gz"
+    sha256 "5b39c33e91a9382b0b12e85b3808f9acb8ec296b540f23173b01d922c7580e12"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/hahwul/dalfox/releases/download/v2.3.3/dalfox_2.3.3_linux_arm64.tar.gz"
-    sha256 "7993294ef1df5e74e121e2df1da843287515d90c0b3dad4a63f6e6adef7d41ba"
+    url "https://github.com/hahwul/dalfox/releases/download/v2.3.4/dalfox_2.3.4_linux_arm64.tar.gz"
+    sha256 "68b3ab25beeb3cf3293fecc74915612dd50038f30aacce998f76c77719adb200"
   end
 
   def install
