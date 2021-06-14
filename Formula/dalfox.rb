@@ -5,24 +5,29 @@
 class Dalfox < Formula
   desc "DalFox(Finder Of XSS) / Parameter Analysis and XSS Scanning tool based on golang"
   homepage "https://www.hahwul.com"
-  version "2.3.7"
+  version "2.4.0"
   bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/hahwul/dalfox/releases/download/v2.3.7/dalfox_2.3.7_darwin_amd64.tar.gz"
-    sha256 "fe8c4786fa1a28afd7f56a7161b07b48f33986e7e24e5c3d092442cba97f2625"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/hahwul/dalfox/releases/download/v2.4.0/dalfox_2.4.0_darwin_amd64.tar.gz"
+      sha256 "4a7d35cae47105e3e9de65be2e0ea4caabe2331bbd14294b59dcf1d5674ff1e5"
+    end
   end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/hahwul/dalfox/releases/download/v2.3.7/dalfox_2.3.7_linux_amd64.tar.gz"
-    sha256 "f5bd220193179f116eaaf15e39dbe66c796e0eb61899c4f808689e097072e112"
-  end
-  if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/hahwul/dalfox/releases/download/v2.3.7/dalfox_2.3.7_linux_armv6.tar.gz"
-    sha256 "60aaea23b8e4de80abd067e8d43ec2840c7a0d94c0347e66c6eec259ea3ae9e0"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/hahwul/dalfox/releases/download/v2.3.7/dalfox_2.3.7_linux_arm64.tar.gz"
-    sha256 "6ccc2384dbc314228060565c68b182134c61e1142d7ceeb31aa8aa88a6393e0d"
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/hahwul/dalfox/releases/download/v2.4.0/dalfox_2.4.0_linux_amd64.tar.gz"
+      sha256 "6caca2212e09c3ad57856c9256454fbfd7c5eaa240897a1beb50d4a60c4bc68a"
+    end
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/hahwul/dalfox/releases/download/v2.4.0/dalfox_2.4.0_linux_armv6.tar.gz"
+      sha256 "a102264fe9873e5584020a6bd07551a073ead90f9007e9cdd3f2fea1f3eec856"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/hahwul/dalfox/releases/download/v2.4.0/dalfox_2.4.0_linux_arm64.tar.gz"
+      sha256 "fbabd1b17c7f209dd206368b4ce899d97be6d9a9d7b78b3fd8bae886ac5c77d0"
+    end
   end
 
   def install
