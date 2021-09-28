@@ -5,28 +5,32 @@
 class Dalfox < Formula
   desc "DalFox(Finder Of XSS) / Parameter Analysis and XSS Scanning tool based on golang"
   homepage "https://www.hahwul.com"
-  version "2.5.1"
+  version "2.5.2"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/hahwul/dalfox/releases/download/v2.5.1/dalfox_2.5.1_darwin_amd64.tar.gz"
-      sha256 "320f5b7588ef4ab3d175efc0b25ffdb631e53342fd851957408015099d9ab8f4"
+      url "https://github.com/hahwul/dalfox/releases/download/v2.5.2/dalfox_2.5.2_darwin_amd64.tar.gz"
+      sha256 "2f533699ad5e9cb5d9b1d84a06846a6860f9b668b422e78fa91307df391ae5e5"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/hahwul/dalfox/releases/download/v2.5.2/dalfox_2.5.2_darwin_arm64.tar.gz"
+      sha256 "cb13d1e7c3ec851bbcb7fedd4e5d7bb5cd9f0869f7ac7e926726e7d394f4945c"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/hahwul/dalfox/releases/download/v2.5.1/dalfox_2.5.1_linux_amd64.tar.gz"
-      sha256 "683cec09d2e3e7cae5dd424349b6bc674c85759ccefcb4f8203b2356182c3425"
+      url "https://github.com/hahwul/dalfox/releases/download/v2.5.2/dalfox_2.5.2_linux_amd64.tar.gz"
+      sha256 "15874473028f4edd2fc6286bbfc586c81e570bf63f65502db5920c7305e1ef03"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/hahwul/dalfox/releases/download/v2.5.1/dalfox_2.5.1_linux_armv6.tar.gz"
-      sha256 "64f5a3d69a4e2b4bce658b3afcb64975d5172b4427be2af47686027ea441d256"
+      url "https://github.com/hahwul/dalfox/releases/download/v2.5.2/dalfox_2.5.2_linux_armv6.tar.gz"
+      sha256 "c44f56f0a721ae3dd859829dc01514db8b0f4efbbe2150fa6f555bd7ff33af59"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/hahwul/dalfox/releases/download/v2.5.1/dalfox_2.5.1_linux_arm64.tar.gz"
-      sha256 "829e89efd82d2ba0aba3c416e1d002489a23a570c73eafee7cdc8939da797cc4"
+      url "https://github.com/hahwul/dalfox/releases/download/v2.5.2/dalfox_2.5.2_linux_arm64.tar.gz"
+      sha256 "c905b504423518e2fe00c8a13ee7372f25099f408b45bfcbe730024e4d9cf287"
     end
   end
 
