@@ -5,32 +5,32 @@
 class Dalfox < Formula
   desc "DalFox(Finder Of XSS) / Parameter Analysis and XSS Scanning tool based on golang"
   homepage "https://www.hahwul.com"
-  version "2.5.2"
+  version "2.5.3"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/hahwul/dalfox/releases/download/v2.5.2/dalfox_2.5.2_darwin_amd64.tar.gz"
-      sha256 "2f533699ad5e9cb5d9b1d84a06846a6860f9b668b422e78fa91307df391ae5e5"
+      url "https://github.com/hahwul/dalfox/releases/download/v2.5.3/dalfox_2.5.3_darwin_amd64.tar.gz"
+      sha256 "ff209acfb2fc4c925ddf8064ec5d84cd5507d1e346af6882ff7e6e60b1ccb199"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/hahwul/dalfox/releases/download/v2.5.2/dalfox_2.5.2_darwin_arm64.tar.gz"
-      sha256 "cb13d1e7c3ec851bbcb7fedd4e5d7bb5cd9f0869f7ac7e926726e7d394f4945c"
+      url "https://github.com/hahwul/dalfox/releases/download/v2.5.3/dalfox_2.5.3_darwin_arm64.tar.gz"
+      sha256 "f4a3cc3239ca782b64d4b6f0f75048e3a4fc967a343b7dc0adb88c601e4b8740"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/hahwul/dalfox/releases/download/v2.5.2/dalfox_2.5.2_linux_amd64.tar.gz"
-      sha256 "15874473028f4edd2fc6286bbfc586c81e570bf63f65502db5920c7305e1ef03"
+      url "https://github.com/hahwul/dalfox/releases/download/v2.5.3/dalfox_2.5.3_linux_amd64.tar.gz"
+      sha256 "b9351939c229d54f70685cb06946c51b89ee2b362e1fb1409c4e92ccfcc42962"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/hahwul/dalfox/releases/download/v2.5.2/dalfox_2.5.2_linux_armv6.tar.gz"
-      sha256 "c44f56f0a721ae3dd859829dc01514db8b0f4efbbe2150fa6f555bd7ff33af59"
+      url "https://github.com/hahwul/dalfox/releases/download/v2.5.3/dalfox_2.5.3_linux_armv6.tar.gz"
+      sha256 "4c39d01c0a8c515c5295cb52fdb8b46ca66e9f6440852c02f3310abc4d2be3d9"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/hahwul/dalfox/releases/download/v2.5.2/dalfox_2.5.2_linux_arm64.tar.gz"
-      sha256 "c905b504423518e2fe00c8a13ee7372f25099f408b45bfcbe730024e4d9cf287"
+      url "https://github.com/hahwul/dalfox/releases/download/v2.5.3/dalfox_2.5.3_linux_arm64.tar.gz"
+      sha256 "d9cd03e60b308927ed6699bc32e1cafe4d8b7139a45e20c2e2bc754f9f9ecfe2"
     end
   end
 
