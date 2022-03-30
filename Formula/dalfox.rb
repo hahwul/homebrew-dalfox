@@ -5,20 +5,20 @@
 class Dalfox < Formula
   desc "DalFox(Finder Of XSS) / Parameter Analysis and XSS Scanning tool based on golang"
   homepage "https://www.hahwul.com"
-  version "2.7.3"
+  version "2.7.4"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/hahwul/dalfox/releases/download/v2.7.3/dalfox_2.7.3_darwin_arm64.tar.gz"
-      sha256 "58d23295e3babc4364cb720daa4bf7ee8d3e5248aa8b66286fb6ccef1b5d1687"
+      url "https://github.com/hahwul/dalfox/releases/download/v2.7.4/dalfox_2.7.4_darwin_arm64.tar.gz"
+      sha256 "1a40b318237d9b3b2d8ec089f2f74cfabeff54a5715174e62ecc6179d8df80ad"
 
       def install
         bin.install "dalfox"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/hahwul/dalfox/releases/download/v2.7.3/dalfox_2.7.3_darwin_amd64.tar.gz"
-      sha256 "f99a5faee30c7f6e56729b712c321961d0bdf8e732ec44556314e117c029cf69"
+      url "https://github.com/hahwul/dalfox/releases/download/v2.7.4/dalfox_2.7.4_darwin_amd64.tar.gz"
+      sha256 "19c5fa1302a48bf53afb7e55d35161444f4816f3594a6bc9c3a14093328ed546"
 
       def install
         bin.install "dalfox"
@@ -28,24 +28,24 @@ class Dalfox < Formula
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/hahwul/dalfox/releases/download/v2.7.3/dalfox_2.7.3_linux_armv6.tar.gz"
-      sha256 "9d81ac61196fce684de76b1764183173ab471d7a5351a870665aebcc8c51e8b3"
+      url "https://github.com/hahwul/dalfox/releases/download/v2.7.4/dalfox_2.7.4_linux_armv6.tar.gz"
+      sha256 "cd1a761b3b8bbff18b30d947d3e5cba64aad916da501120bba14bbece0dddaab"
 
       def install
         bin.install "dalfox"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/hahwul/dalfox/releases/download/v2.7.3/dalfox_2.7.3_linux_arm64.tar.gz"
-      sha256 "64d15a5df805c407babaaae87f0ca5d0735f045a5e4b78f1961c6c820e9f2efe"
+      url "https://github.com/hahwul/dalfox/releases/download/v2.7.4/dalfox_2.7.4_linux_arm64.tar.gz"
+      sha256 "ab2514fcc92cce915b39e77c5a18eab24fc9c2738a33f7d97ec66eefee7e2893"
 
       def install
         bin.install "dalfox"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/hahwul/dalfox/releases/download/v2.7.3/dalfox_2.7.3_linux_amd64.tar.gz"
-      sha256 "ee01188e78b7649abb2dc5d22fce08901a9f8c6db12ea800c86dfa731923ff08"
+      url "https://github.com/hahwul/dalfox/releases/download/v2.7.4/dalfox_2.7.4_linux_amd64.tar.gz"
+      sha256 "3795d3d9dfc59dbccf377667a75926364b40d3b34a39386d504f980b31c164ff"
 
       def install
         bin.install "dalfox"
