@@ -5,8 +5,8 @@
 class Dalfox < Formula
   desc "Is a powerful open-source xss scanner and utility focused on automatio"
   homepage "https://github.com/hahwul/dalfox"
-  url "https://github.com/hahwul/dalfox/archive/refs/tags/v3.1.0.tar.gz"
-  sha256 "48cb44ef215d8905135e36cf27605c5a5addf3123cff29ca48e11f95c681c6ee"
+  url "https://github.com/hahwul/dalfox/archive/refs/tags/v3.1.1.tar.gz"
+  sha256 "77cb8837782b759c16ec55c0873c53e3fdb9d4578307ad60bc73db4cbb8ba109"
   license "MIT"
 
   depends_on "rust"
