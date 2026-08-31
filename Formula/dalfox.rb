@@ -5,15 +5,18 @@
 class Dalfox < Formula
   desc "Is a powerful open-source xss scanner and utility focused on automatio"
   homepage "https://github.com/hahwul/dalfox"
-  url "https://github.com/hahwul/dalfox/archive/refs/tags/v3.2.1.tar.gz"
-  sha256 "6b3b09be44dcfa00e15fded2999ccbaf7cae53b8cfa6ea7ce191f27d6c209c9b"
+  url "https://github.com/hahwul/dalfox/archive/refs/tags/v3.2.2.tar.gz"
+  sha256 "c66e1fffc4c3294bd4081df6817f22facca94cd2fda84161acb4717c8a6d8c7e"
   license "MIT"
 
   depends_on "rust"
 
   def install
     system "cargo build --release"
+    (buildpath/"dalfox.1").write Utils.safe_popen_read("#{buildpath}/target/release/dalfox", "man")
     bin.install "target/release/dalfox"
+    man1.install "dalfox.1"
+    generate_completions_from_executable(bin/"dalfox", "completion")
   end
 
   test do
